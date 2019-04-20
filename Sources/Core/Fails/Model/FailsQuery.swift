@@ -16,14 +16,27 @@ struct FailsQuery {
     var nSFW: Bool
 }
 
-enum FailsMode: String {
+enum FailsMode: String, RawRepresentable {
     case standard = "standard"
+
+    var description: String {
+        return self.rawValue
+    }
 }
 
 enum FailsTimeFrame: String {
     case all = "all"
+
+    var description: String {
+        return self.rawValue
+    }
 }
 
 enum FailsOrder: String {
     case hot = "hot"
+    case new = "new"
+
+    var description: String {
+        return self.rawValue
+    }
 }

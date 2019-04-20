@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AKJ-vu-5Bb">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fails View Controller-->
+        <scene sceneID="y5o-X4-B2Q">
+            <objects>
+                <viewController id="AKJ-vu-5Bb" customClass="FailsViewController" customModule="LivestreamFailsUnofficial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5xM-F5-g3g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcL-GB-hj9" customClass="StreamersView" customModule="LivestreamFailsUnofficial" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                                <color key="backgroundColor" red="0.070588235294117646" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="idJ-Nd-Kph"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m3A-cl-bEO" customClass="FailVideoView" customModule="LivestreamFailsUnofficial" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="124" width="414" height="689"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hN8-rM-Kxj" customClass="SocialView" customModule="LivestreamFailsUnofficial" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="713" width="414" height="100"/>
+                                <color key="backgroundColor" red="0.070588235289999995" green="0.1058823529" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="DDu-E2-gII"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.070588235294117646" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="m3A-cl-bEO" firstAttribute="bottom" secondItem="kny-pu-NL0" secondAttribute="bottom" id="3JQ-nR-6Vx"/>
+                            <constraint firstItem="m3A-cl-bEO" firstAttribute="leading" secondItem="kny-pu-NL0" secondAttribute="leading" id="58i-wn-jNL"/>
+                            <constraint firstItem="tcL-GB-hj9" firstAttribute="leading" secondItem="kny-pu-NL0" secondAttribute="leading" id="BC5-0C-jGq"/>
+                            <constraint firstItem="hN8-rM-Kxj" firstAttribute="leading" secondItem="kny-pu-NL0" secondAttribute="leading" id="L69-8C-V3C"/>
+                            <constraint firstItem="hN8-rM-Kxj" firstAttribute="trailing" secondItem="kny-pu-NL0" secondAttribute="trailing" id="LxI-5a-TPj"/>
+                            <constraint firstItem="tcL-GB-hj9" firstAttribute="trailing" secondItem="kny-pu-NL0" secondAttribute="trailing" id="VXd-8n-Df4"/>
+                            <constraint firstItem="tcL-GB-hj9" firstAttribute="top" secondItem="kny-pu-NL0" secondAttribute="top" id="bhI-Qk-o6l"/>
+                            <constraint firstItem="m3A-cl-bEO" firstAttribute="trailing" secondItem="kny-pu-NL0" secondAttribute="trailing" id="coV-Hi-pny"/>
+                            <constraint firstItem="m3A-cl-bEO" firstAttribute="top" secondItem="tcL-GB-hj9" secondAttribute="bottom" id="ohx-5d-k30"/>
+                            <constraint firstItem="kny-pu-NL0" firstAttribute="bottom" secondItem="hN8-rM-Kxj" secondAttribute="bottom" id="s9A-JG-kjJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kny-pu-NL0"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="TabIconPlay" id="R3A-kl-6Tp"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="currentFailView" destination="m3A-cl-bEO" id="MA0-Oq-POK"/>
+                        <outlet property="socialView" destination="hN8-rM-Kxj" id="ZPT-GD-Ty4"/>
+                        <outlet property="streamersView" destination="tcL-GB-hj9" id="ItO-Gn-DKA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bdn-Gq-fhK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298.55072463768118" y="-399.10714285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TabIconPlay" width="20" height="20"/>
+    </resources>
+</document>
