@@ -13,4 +13,8 @@ class StreamerFetcherMock: StreamerFetcher {
         self.callsToFetchStreamerDetails += 1
         return StreamerFixture.validStreamer
     }
+
+    func fetchStreamers() throws -> [Streamer] {
+        return []
+    }
 }

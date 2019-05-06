@@ -27,4 +27,32 @@ final class StreamerHTMLParser {
             throw StreamerHTMLParserError.errorParsingStreamerDetails
         }
     }
+
+    func parseToStreamers(_ html: String) throws -> [Streamer] {
+        var streamers: [Streamer] = []
+
+        do {
+            let doc: Document = try SwiftSoup.parse(html)
+
+            let cards = try doc.select("div.card.mb-2.post-card")
+
+            for item in cards {
+                guard let profilePictureUrlPath = try item.select("img").first()?.attr("src") else {
+                    continue
+                }
+
+                guard let profilePictureUrl = URL(string: profilePictureUrlPath) else {
+                    continue
+                }
+
+                let name = try item.select("p.card-text.title").text()
+
+                streamers.append(Streamer(name: name, profilePictureURL: profilePictureUrl))
+            }
+        } catch {
+            throw StreamerHTMLParserError.errorParsingStreamerDetails
+        }
+
+        return streamers
+    }
 }

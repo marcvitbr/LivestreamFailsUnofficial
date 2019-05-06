@@ -30,6 +30,10 @@ class StreamersView: UIView {
         self.initialize()
     }
 
+    func addStreamers(_ newStreamers: [Streamer]) {
+        newStreamers.forEach(self.addStreamer)
+    }
+
     func addStreamer(_ newStreamer: Streamer) {
         self.queue.sync {
             DispatchQueue.main.async {

@@ -46,6 +46,10 @@
 		CC2915BC226B85FD0054887B /* FailsViewControllerGesturesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2915BA226B85FD0054887B /* FailsViewControllerGesturesExtension.swift */; };
 		CC2915C4226C2FBC0054887B /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2915C3226C2FBC0054887B /* SwiftSoup.framework */; };
 		CC2915C5226C3A5A0054887B /* RemoteFailsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC29159D226AB14D0054887B /* RemoteFailsFetcher.swift */; };
+		CC7B1BF1227FD16F0059AA70 /* LikeButtonWaveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B1BF0227FD16F0059AA70 /* LikeButtonWaveExtension.swift */; };
+		CC7B1BF2227FD16F0059AA70 /* LikeButtonWaveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B1BF0227FD16F0059AA70 /* LikeButtonWaveExtension.swift */; };
+		CC7B1BF4227FD1D60059AA70 /* LikeButtonFloatingTextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B1BF3227FD1D60059AA70 /* LikeButtonFloatingTextExtension.swift */; };
+		CC7B1BF5227FD1D60059AA70 /* LikeButtonFloatingTextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B1BF3227FD1D60059AA70 /* LikeButtonFloatingTextExtension.swift */; };
 		CC98A1F2227A06730014F98A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC291599226AB06F0054887B /* Kingfisher.framework */; };
 		CC98A1F5227A12920014F98A /* DefaultColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC98A1F4227A12920014F98A /* DefaultColors.swift */; };
 		CC98A1F6227A13BC0014F98A /* DefaultColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC98A1F4227A12920014F98A /* DefaultColors.swift */; };
@@ -86,13 +90,21 @@
 		CC98A241227BEBAE0014F98A /* LikeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC98A23F227BEBAE0014F98A /* LikeButton.xib */; };
 		CC98A243227BEBD30014F98A /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC98A242227BEBD30014F98A /* LikeButton.swift */; };
 		CC98A244227BEBD30014F98A /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC98A242227BEBD30014F98A /* LikeButton.swift */; };
+		CCB25ABE2284E8CE0061CB8C /* FetchStreamers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25ABD2284E8CE0061CB8C /* FetchStreamers.swift */; };
+		CCB25ABF2284E8CE0061CB8C /* FetchStreamers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25ABD2284E8CE0061CB8C /* FetchStreamers.swift */; };
+		CCB25AC32284EF330061CB8C /* FetchStreamersExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25AC22284EF330061CB8C /* FetchStreamersExecutor.swift */; };
+		CCB25AC42284EF330061CB8C /* FetchStreamersExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25AC22284EF330061CB8C /* FetchStreamersExecutor.swift */; };
+		CCB25AC62284F5260061CB8C /* DefaultFetchStreamersExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25AC52284F5260061CB8C /* DefaultFetchStreamersExecutor.swift */; };
+		CCB25AC72284F5260061CB8C /* DefaultFetchStreamersExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25AC52284F5260061CB8C /* DefaultFetchStreamersExecutor.swift */; };
+		CCB25AC92284F5A10061CB8C /* StreamersReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25AC82284F5A10061CB8C /* StreamersReceiver.swift */; };
+		CCB25ACA2284F5A10061CB8C /* StreamersReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25AC82284F5A10061CB8C /* StreamersReceiver.swift */; };
 		CCC4FF4D2279000900EFE99F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC4FF4C2279000900EFE99F /* TabBar.storyboard */; };
 		CCC4FF512279D84D00EFE99F /* Fails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC4FF502279D84D00EFE99F /* Fails.storyboard */; };
 		CCC4FF552279E9B500EFE99F /* StreamersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC4FF542279E9B500EFE99F /* StreamersView.xib */; };
 		CCC4FF572279E9C500EFE99F /* StreamersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC4FF562279E9C500EFE99F /* StreamersView.swift */; };
 		CCC4FF582279E9C500EFE99F /* StreamersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC4FF562279E9C500EFE99F /* StreamersView.swift */; };
-		CCC4FF5B2279EA6C00EFE99F /* BaseCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC4FF5A2279EA6C00EFE99F /* BaseCustomView.swift */; };
-		CCC4FF5C2279EA6C00EFE99F /* BaseCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC4FF5A2279EA6C00EFE99F /* BaseCustomView.swift */; };
+		CCC4FF5B2279EA6C00EFE99F /* PassthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC4FF5A2279EA6C00EFE99F /* PassthroughView.swift */; };
+		CCC4FF5C2279EA6C00EFE99F /* PassthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC4FF5A2279EA6C00EFE99F /* PassthroughView.swift */; };
 		CCEBBE27226D099A00EFFD88 /* FailsHTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBBE26226D099A00EFFD88 /* FailsHTMLParser.swift */; };
 		CCEBBE28226D099A00EFFD88 /* FailsHTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBBE26226D099A00EFFD88 /* FailsHTMLParser.swift */; };
 		CCEBBE2A226D0BCB00EFFD88 /* FailDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBBE29226D0BCB00EFFD88 /* FailDetails.swift */; };
@@ -166,6 +178,8 @@
 		CC2915B0226ADCB20054887B /* FailVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailVideoView.swift; sourceTree = "<group>"; };
 		CC2915BA226B85FD0054887B /* FailsViewControllerGesturesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailsViewControllerGesturesExtension.swift; sourceTree = "<group>"; };
 		CC2915C3226C2FBC0054887B /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/iOS/SwiftSoup.framework; sourceTree = "<group>"; };
+		CC7B1BF0227FD16F0059AA70 /* LikeButtonWaveExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtonWaveExtension.swift; sourceTree = "<group>"; };
+		CC7B1BF3227FD1D60059AA70 /* LikeButtonFloatingTextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtonFloatingTextExtension.swift; sourceTree = "<group>"; };
 		CC98A1F4227A12920014F98A /* DefaultColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultColors.swift; sourceTree = "<group>"; };
 		CC98A1FD227A2B2F0014F98A /* FetchStreamerDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchStreamerDetailsTests.swift; sourceTree = "<group>"; };
 		CC98A200227A337A0014F98A /* StreamerFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamerFixture.swift; sourceTree = "<group>"; };
@@ -188,11 +202,15 @@
 		CC98A23B227BE8270014F98A /* SocialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
 		CC98A23F227BEBAE0014F98A /* LikeButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikeButton.xib; sourceTree = "<group>"; };
 		CC98A242227BEBD30014F98A /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		CCB25ABD2284E8CE0061CB8C /* FetchStreamers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchStreamers.swift; sourceTree = "<group>"; };
+		CCB25AC22284EF330061CB8C /* FetchStreamersExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchStreamersExecutor.swift; sourceTree = "<group>"; };
+		CCB25AC52284F5260061CB8C /* DefaultFetchStreamersExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFetchStreamersExecutor.swift; sourceTree = "<group>"; };
+		CCB25AC82284F5A10061CB8C /* StreamersReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamersReceiver.swift; sourceTree = "<group>"; };
 		CCC4FF4C2279000900EFE99F /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		CCC4FF502279D84D00EFE99F /* Fails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Fails.storyboard; path = Sources/App/Presentation/Fails/Storyboard/Fails.storyboard; sourceTree = SOURCE_ROOT; };
 		CCC4FF542279E9B500EFE99F /* StreamersView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreamersView.xib; sourceTree = "<group>"; };
 		CCC4FF562279E9C500EFE99F /* StreamersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamersView.swift; sourceTree = "<group>"; };
-		CCC4FF5A2279EA6C00EFE99F /* BaseCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomView.swift; sourceTree = "<group>"; };
+		CCC4FF5A2279EA6C00EFE99F /* PassthroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassthroughView.swift; sourceTree = "<group>"; };
 		CCEBBE26226D099A00EFFD88 /* FailsHTMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailsHTMLParser.swift; sourceTree = "<group>"; };
 		CCEBBE29226D0BCB00EFFD88 /* FailDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailDetails.swift; sourceTree = "<group>"; };
 		CCEBBE2D226D0DE500EFFD88 /* FailsFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailsFixture.swift; sourceTree = "<group>"; };
@@ -493,6 +511,8 @@
 		CC98A1F9227A2A850014F98A /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				CCB25AC02284E9490061CB8C /* Shared */,
+				CCB25ABC2284E8A50061CB8C /* FetchStreamers */,
 				CC98A202227A357B0014F98A /* FetchStreamerDetails */,
 			);
 			path = UseCase;
@@ -539,8 +559,6 @@
 			children = (
 				CC98A203227A35920014F98A /* FetchStreamerDetails.swift */,
 				CC98A209227A36360014F98A /* StreamerDetailsReceiver.swift */,
-				CC98A206227A36050014F98A /* StreamerFetcher.swift */,
-				CC98A20C227A36610014F98A /* StreamerFetcherError.swift */,
 			);
 			path = FetchStreamerDetails;
 			sourceTree = "<group>";
@@ -556,6 +574,7 @@
 		CC98A219227A62210014F98A /* Streamers */ = {
 			isa = PBXGroup;
 			children = (
+				CCB25AC12284EF1E0061CB8C /* FetchStreamers */,
 				CC98A227227B85250014F98A /* FetchStreamerDetails */,
 				CC98A21A227A62270014F98A /* Parser */,
 			);
@@ -635,10 +654,39 @@
 		CC98A23E227BEBA20014F98A /* LikeButton */ = {
 			isa = PBXGroup;
 			children = (
-				CC98A23F227BEBAE0014F98A /* LikeButton.xib */,
 				CC98A242227BEBD30014F98A /* LikeButton.swift */,
+				CC7B1BF3227FD1D60059AA70 /* LikeButtonFloatingTextExtension.swift */,
+				CC7B1BF0227FD16F0059AA70 /* LikeButtonWaveExtension.swift */,
+				CC98A23F227BEBAE0014F98A /* LikeButton.xib */,
 			);
 			path = LikeButton;
+			sourceTree = "<group>";
+		};
+		CCB25ABC2284E8A50061CB8C /* FetchStreamers */ = {
+			isa = PBXGroup;
+			children = (
+				CCB25ABD2284E8CE0061CB8C /* FetchStreamers.swift */,
+				CCB25AC82284F5A10061CB8C /* StreamersReceiver.swift */,
+			);
+			path = FetchStreamers;
+			sourceTree = "<group>";
+		};
+		CCB25AC02284E9490061CB8C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CC98A206227A36050014F98A /* StreamerFetcher.swift */,
+				CC98A20C227A36610014F98A /* StreamerFetcherError.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CCB25AC12284EF1E0061CB8C /* FetchStreamers */ = {
+			isa = PBXGroup;
+			children = (
+				CCB25AC52284F5260061CB8C /* DefaultFetchStreamersExecutor.swift */,
+				CCB25AC22284EF330061CB8C /* FetchStreamersExecutor.swift */,
+			);
+			path = FetchStreamers;
 			sourceTree = "<group>";
 		};
 		CCC4FF4B2278FFDD00EFE99F /* Storyboard */ = {
@@ -685,7 +733,7 @@
 		CCC4FF592279EA3C00EFE99F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CCC4FF5A2279EA6C00EFE99F /* BaseCustomView.swift */,
+				CCC4FF5A2279EA6C00EFE99F /* PassthroughView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -935,11 +983,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCC4FF5B2279EA6C00EFE99F /* BaseCustomView.swift in Sources */,
+				CCC4FF5B2279EA6C00EFE99F /* PassthroughView.swift in Sources */,
+				CCB25ABE2284E8CE0061CB8C /* FetchStreamers.swift in Sources */,
 				CC2915A7226AC1880054887B /* Dispatcher.swift in Sources */,
 				CC98A204227A35920014F98A /* FetchStreamerDetails.swift in Sources */,
 				CC98A23C227BE8270014F98A /* SocialView.swift in Sources */,
 				CC291580226AA7790054887B /* FetchFailsSummaries.swift in Sources */,
+				CCB25AC32284EF330061CB8C /* FetchStreamersExecutor.swift in Sources */,
 				CC291583226AA7940054887B /* FailsFetcher.swift in Sources */,
 				CCEBBE27226D099A00EFFD88 /* FailsHTMLParser.swift in Sources */,
 				CCEBBE5A226D2E4D00EFFD88 /* FailsPresenter.swift in Sources */,
@@ -960,6 +1010,8 @@
 				CC98A225227B84F20014F98A /* StreamersPresenter.swift in Sources */,
 				CC98A207227A36050014F98A /* StreamerFetcher.swift in Sources */,
 				CC291590226AA8410054887B /* Streamer.swift in Sources */,
+				CC7B1BF1227FD16F0059AA70 /* LikeButtonWaveExtension.swift in Sources */,
+				CCB25AC92284F5A10061CB8C /* StreamersReceiver.swift in Sources */,
 				CC29158D226AA81C0054887B /* FailSummary.swift in Sources */,
 				CC291589226AA7FA0054887B /* FailsFetcherError.swift in Sources */,
 				CC291593226AA9AF0054887B /* FailsQuery.swift in Sources */,
@@ -971,8 +1023,10 @@
 				CCEBBE42226D247200EFFD88 /* FetchFailsSummariesExecutor.swift in Sources */,
 				CC2915B1226ADCB20054887B /* FailVideoView.swift in Sources */,
 				CCEBBE33226D136100EFFD88 /* FetchFailDetails.swift in Sources */,
+				CC7B1BF4227FD1D60059AA70 /* LikeButtonFloatingTextExtension.swift in Sources */,
 				CC2915AD226AC2B70054887B /* FailsViewController.swift in Sources */,
 				CC2915AA226AC1E20054887B /* DefaultDispatcher.swift in Sources */,
+				CCB25AC62284F5260061CB8C /* DefaultFetchStreamersExecutor.swift in Sources */,
 				CCEBBE3D226D232700EFFD88 /* FailsHTMLParserError.swift in Sources */,
 				CC291586226AA7AE0054887B /* FailsSummariesReceiver.swift in Sources */,
 				CCEBBE50226D2B5800EFFD88 /* FetchFailDetailsExecutor.swift in Sources */,
@@ -990,7 +1044,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC98A20E227A36610014F98A /* StreamerFetcherError.swift in Sources */,
-				CCC4FF5C2279EA6C00EFE99F /* BaseCustomView.swift in Sources */,
+				CCC4FF5C2279EA6C00EFE99F /* PassthroughView.swift in Sources */,
 				CC2915C5226C3A5A0054887B /* RemoteFailsFetcher.swift in Sources */,
 				CC2915BC226B85FD0054887B /* FailsViewControllerGesturesExtension.swift in Sources */,
 				CC98A1F6227A13BC0014F98A /* DefaultColors.swift in Sources */,
@@ -1003,17 +1057,22 @@
 				CC29156D226A6DFC0054887B /* UseCase.swift in Sources */,
 				CC2915AE226AC2B70054887B /* FailsViewController.swift in Sources */,
 				CCEBBE46226D24A200EFFD88 /* DefaultFetchFailsSummariesExecutor.swift in Sources */,
+				CCB25AC42284EF330061CB8C /* FetchStreamersExecutor.swift in Sources */,
 				CC291581226AA7790054887B /* FetchFailsSummaries.swift in Sources */,
 				CC29157E226AA74C0054887B /* FailsFetcherMockForException.swift in Sources */,
 				CC98A220227A625E0014F98A /* StreamerHTMLParserError.swift in Sources */,
 				CC98A212227A36A60014F98A /* StreamerDetailsReceiverMock.swift in Sources */,
 				CC98A208227A36050014F98A /* StreamerFetcher.swift in Sources */,
+				CCB25ABF2284E8CE0061CB8C /* FetchStreamers.swift in Sources */,
 				CC98A20B227A36360014F98A /* StreamerDetailsReceiver.swift in Sources */,
 				CCEBBE3E226D232700EFFD88 /* FailsHTMLParserError.swift in Sources */,
 				CC29157C226AA72B0054887B /* FailsReceiverMock.swift in Sources */,
 				CCEBBE4C226D278100EFFD88 /* FailDetailsReceiver.swift in Sources */,
+				CCB25AC72284F5260061CB8C /* DefaultFetchStreamersExecutor.swift in Sources */,
+				CC7B1BF5227FD1D60059AA70 /* LikeButtonFloatingTextExtension.swift in Sources */,
 				CC98A214227A36C50014F98A /* StreamerFetcherMockForException.swift in Sources */,
 				CC98A23D227BE8270014F98A /* SocialView.swift in Sources */,
+				CCB25ACA2284F5A10061CB8C /* StreamersReceiver.swift in Sources */,
 				CC98A22D227B85860014F98A /* DefaultFetchStreamerDetailsExecutor.swift in Sources */,
 				CC98A1FE227A2B2F0014F98A /* FetchStreamerDetailsTests.swift in Sources */,
 				CC2915A8226AC1880054887B /* Dispatcher.swift in Sources */,
@@ -1027,6 +1086,7 @@
 				CC98A22A227B854A0014F98A /* FetchStreamerDetailsExecutor.swift in Sources */,
 				CC98A205227A35920014F98A /* FetchStreamerDetails.swift in Sources */,
 				CCEBBE2E226D0DE500EFFD88 /* FailsFixture.swift in Sources */,
+				CC7B1BF2227FD16F0059AA70 /* LikeButtonWaveExtension.swift in Sources */,
 				CC291587226AA7AE0054887B /* FailsSummariesReceiver.swift in Sources */,
 				CCEBBE3B226D14ED00EFFD88 /* FetchFailDetailsTests.swift in Sources */,
 				CC291584226AA7940054887B /* FailsFetcher.swift in Sources */,

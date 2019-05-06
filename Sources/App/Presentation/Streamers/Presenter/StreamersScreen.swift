@@ -10,4 +10,8 @@ protocol StreamersScreen: AnyObject {
     func presentStreamerDetails(_ streamer: Streamer)
 
     func showErrorObtainingStreamerDetails(_ name: String)
+
+    func presentStreamers(_ streamers: [Streamer])
+
+    func showErrorObtainingStreamers()
 }

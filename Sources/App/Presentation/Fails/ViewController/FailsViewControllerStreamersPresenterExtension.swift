@@ -9,6 +9,7 @@
 extension FailsViewController: StreamersScreen {
     func configureStreamersPresenter() {
         self.streamersPresenter = StreamersPresenter(screen: self,
+                                                     fetchStreamersExecutor: self.streamersExecutor,
                                                      fetchDetailsExecutor: self.streamersDetailsExecutor,
                                                      dispatcher: self.dispatcher)
     }
@@ -18,4 +19,10 @@ extension FailsViewController: StreamersScreen {
     }
 
     func showErrorObtainingStreamerDetails(_ name: String) {}
+
+    func presentStreamers(_ streamers: [Streamer]) {
+        self.streamersView.addStreamers(streamers)
+    }
+
+    func showErrorObtainingStreamers() {}
 }

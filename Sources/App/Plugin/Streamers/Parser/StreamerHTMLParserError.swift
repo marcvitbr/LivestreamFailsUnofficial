@@ -10,4 +10,5 @@ import Foundation
 
 enum StreamerHTMLParserError: Error {
     case errorParsingStreamerDetails
+    case errorParsingStreamers
 }

@@ -18,6 +18,7 @@ class FailsViewController: UIViewController {
 
     internal lazy var failsSummariesExecutor = DefaultFetchFailsSummariesExecutor()
     internal lazy var failDetailsExecutor = DefaultFetchFailDetailsExecutor()
+    internal lazy var streamersExecutor = DefaultFetchStreamersExecutor()
     internal lazy var streamersDetailsExecutor = DefaultFetchStreamerDetailsExecutor()
     internal lazy var dispatcher = DefaultDispatcher()
 
@@ -45,6 +46,8 @@ class FailsViewController: UIViewController {
         super.viewWillAppear(animated)
 
         self.failsPresenter?.fetchSummaries()
+
+        self.streamersPresenter?.fetchStreamers()
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {

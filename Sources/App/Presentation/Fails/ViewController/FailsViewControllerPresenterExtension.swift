@@ -28,8 +28,6 @@ extension FailsViewController: FailsScreen {
         self.currentFailIndex = 0
 
         self.failsPresenter?.fetchDetails(of: first.failID)
-
-        self.streamersPresenter?.fetchStreamersDetails(for: fails)
     }
 
     func presentFailDetails(_ details: FailDetails) {
