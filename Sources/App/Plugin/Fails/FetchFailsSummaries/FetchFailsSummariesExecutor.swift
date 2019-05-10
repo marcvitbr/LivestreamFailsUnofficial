@@ -7,5 +7,5 @@
 //
 
 protocol FetchFailsSummariesExecutor: AnyObject {
-    func executeFetchFailsSummaries(page: Int) -> [FailSummary]
+    func executeFetchFailsSummaries(query: FailsQuery) -> [FailSummary]
 }

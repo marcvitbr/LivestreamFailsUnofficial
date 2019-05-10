@@ -14,10 +14,12 @@ struct FailsQuery {
     var order: FailsOrder
     var timeFrame: FailsTimeFrame
     var nSFW: Bool
+    var streamerName: String?
 }
 
 enum FailsMode: String, RawRepresentable {
     case standard = "standard"
+    case streamer = "streamer"
 
     var description: String {
         return self.rawValue
@@ -26,6 +28,7 @@ enum FailsMode: String, RawRepresentable {
 
 enum FailsTimeFrame: String {
     case all = "all"
+    case month = "month"
 
     var description: String {
         return self.rawValue

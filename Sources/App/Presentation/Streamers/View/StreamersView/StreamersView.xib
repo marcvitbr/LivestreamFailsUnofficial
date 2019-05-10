@@ -15,6 +15,7 @@
                 <outlet property="contentView" destination="iN0-l3-epB" id="7iM-aR-3fd"/>
                 <outlet property="scrollView" destination="N5Z-Hb-A6p" id="k0Q-Ma-6Ip"/>
                 <outlet property="streamersContainer" destination="AhC-2p-1c9" id="sJW-Ns-Qey"/>
+                <outlet property="streamersViewWidthConstraint" destination="Xzg-ID-6AF" id="5Sc-Id-kXe"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -28,6 +29,9 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AhC-2p-1c9">
                             <rect key="frame" x="0.0" y="0.0" width="534" height="172"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" priority="250" constant="534" id="Xzg-ID-6AF"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -35,7 +39,6 @@
                         <constraint firstAttribute="bottom" secondItem="AhC-2p-1c9" secondAttribute="bottom" id="3EY-yP-uni"/>
                         <constraint firstItem="AhC-2p-1c9" firstAttribute="height" secondItem="N5Z-Hb-A6p" secondAttribute="height" id="FPg-yW-757"/>
                         <constraint firstItem="AhC-2p-1c9" firstAttribute="leading" secondItem="N5Z-Hb-A6p" secondAttribute="leading" id="UYq-Xl-mT7"/>
-                        <constraint firstItem="AhC-2p-1c9" firstAttribute="width" secondItem="N5Z-Hb-A6p" secondAttribute="width" priority="250" id="aUI-Ih-mZz"/>
                         <constraint firstAttribute="trailing" secondItem="AhC-2p-1c9" secondAttribute="trailing" id="bhc-gi-9ec"/>
                         <constraint firstItem="AhC-2p-1c9" firstAttribute="top" secondItem="N5Z-Hb-A6p" secondAttribute="top" id="ePg-fz-bl6"/>
                     </constraints>

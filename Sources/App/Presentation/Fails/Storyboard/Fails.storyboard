@@ -25,9 +25,26 @@
                                     <constraint firstAttribute="height" constant="80" id="idJ-Nd-Kph"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m3A-cl-bEO" customClass="FailVideoView" customModule="LivestreamFailsUnofficial" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="124" width="414" height="689"/>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="75" translatesAutoresizingMaskIntoConstraints="NO" id="pxI-12-s24" customClass="FailDetailView" customModule="LivestreamFailsUnofficial" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="124" width="414" height="75"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="75" id="Lps-mc-XPY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="m3A-cl-bEO" customClass="FailVideoView" customModule="LivestreamFailsUnofficial" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="199" width="414" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="250" id="oqk-5s-9CG"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vep-ng-exq" userLabel="Overlay View" customClass="FailOverlayView" customModule="LivestreamFailsUnofficial" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="449" width="414" height="85"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.14117647058823529" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="oF4-Gu-fbz"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hN8-rM-Kxj" customClass="SocialView" customModule="LivestreamFailsUnofficial" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="713" width="414" height="100"/>
@@ -39,23 +56,30 @@
                         </subviews>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="m3A-cl-bEO" firstAttribute="bottom" secondItem="kny-pu-NL0" secondAttribute="bottom" id="3JQ-nR-6Vx"/>
-                            <constraint firstItem="m3A-cl-bEO" firstAttribute="leading" secondItem="kny-pu-NL0" secondAttribute="leading" id="58i-wn-jNL"/>
+                            <constraint firstItem="Vep-ng-exq" firstAttribute="leading" secondItem="kny-pu-NL0" secondAttribute="leading" id="3OZ-jw-UXT"/>
                             <constraint firstItem="tcL-GB-hj9" firstAttribute="leading" secondItem="kny-pu-NL0" secondAttribute="leading" id="BC5-0C-jGq"/>
+                            <constraint firstItem="m3A-cl-bEO" firstAttribute="top" secondItem="pxI-12-s24" secondAttribute="bottom" id="C32-xc-R6I"/>
                             <constraint firstItem="hN8-rM-Kxj" firstAttribute="leading" secondItem="kny-pu-NL0" secondAttribute="leading" id="L69-8C-V3C"/>
                             <constraint firstItem="hN8-rM-Kxj" firstAttribute="trailing" secondItem="kny-pu-NL0" secondAttribute="trailing" id="LxI-5a-TPj"/>
                             <constraint firstItem="tcL-GB-hj9" firstAttribute="trailing" secondItem="kny-pu-NL0" secondAttribute="trailing" id="VXd-8n-Df4"/>
+                            <constraint firstItem="m3A-cl-bEO" firstAttribute="leading" secondItem="kny-pu-NL0" secondAttribute="leading" id="X4x-kf-kCM"/>
                             <constraint firstItem="tcL-GB-hj9" firstAttribute="top" secondItem="kny-pu-NL0" secondAttribute="top" id="bhI-Qk-o6l"/>
-                            <constraint firstItem="m3A-cl-bEO" firstAttribute="trailing" secondItem="kny-pu-NL0" secondAttribute="trailing" id="coV-Hi-pny"/>
-                            <constraint firstItem="m3A-cl-bEO" firstAttribute="top" secondItem="tcL-GB-hj9" secondAttribute="bottom" id="ohx-5d-k30"/>
+                            <constraint firstItem="Vep-ng-exq" firstAttribute="top" secondItem="m3A-cl-bEO" secondAttribute="bottom" id="hV4-gS-LYj"/>
+                            <constraint firstItem="m3A-cl-bEO" firstAttribute="trailing" secondItem="kny-pu-NL0" secondAttribute="trailing" id="iIM-rg-lKE"/>
+                            <constraint firstItem="pxI-12-s24" firstAttribute="leading" secondItem="kny-pu-NL0" secondAttribute="leading" id="pji-mF-NrR"/>
                             <constraint firstItem="kny-pu-NL0" firstAttribute="bottom" secondItem="hN8-rM-Kxj" secondAttribute="bottom" id="s9A-JG-kjJ"/>
+                            <constraint firstItem="pxI-12-s24" firstAttribute="top" secondItem="tcL-GB-hj9" secondAttribute="bottom" id="wgc-G3-lne"/>
+                            <constraint firstItem="kny-pu-NL0" firstAttribute="trailing" secondItem="pxI-12-s24" secondAttribute="trailing" id="xuE-98-Bbt"/>
+                            <constraint firstItem="Vep-ng-exq" firstAttribute="trailing" secondItem="kny-pu-NL0" secondAttribute="trailing" id="yJT-g2-NmH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kny-pu-NL0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="TabIconPlay" id="R3A-kl-6Tp"/>
+                    <tabBarItem key="tabBarItem" title="" image="Play" selectedImage="PlaySelected" id="R3A-kl-6Tp"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="currentFailView" destination="m3A-cl-bEO" id="MA0-Oq-POK"/>
+                        <outlet property="failDetailView" destination="pxI-12-s24" id="CR8-J6-eax"/>
+                        <outlet property="overlayView" destination="Vep-ng-exq" id="4tc-JK-pEt"/>
                         <outlet property="socialView" destination="hN8-rM-Kxj" id="ZPT-GD-Ty4"/>
                         <outlet property="streamersView" destination="tcL-GB-hj9" id="ItO-Gn-DKA"/>
                     </connections>
@@ -66,6 +90,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TabIconPlay" width="20" height="20"/>
+        <image name="Play" width="20" height="20"/>
+        <image name="PlaySelected" width="20" height="20"/>
     </resources>
 </document>

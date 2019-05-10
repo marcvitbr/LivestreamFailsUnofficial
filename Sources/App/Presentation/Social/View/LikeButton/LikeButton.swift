@@ -9,10 +9,21 @@
 import Foundation
 import UIKit
 
+protocol LikeButtonDataSource: AnyObject {
+    func hasLikesToSpend() -> Bool
+}
+
+protocol LikeButtonDelegate: AnyObject {
+    func handleLikeAction()
+}
+
 class LikeButton: UIView {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var likeImage: UIImageView!
     @IBOutlet weak var countLabel: UILabel!
+
+    weak var dataSource: LikeButtonDataSource?
+    weak var delegate: LikeButtonDelegate?
     unowned var viewController: UIViewController!
 
     internal let maxFontSize: CGFloat = 30
@@ -64,6 +75,10 @@ class LikeButton: UIView {
 
     @objc
     private func tapOnLike(sender: UITapGestureRecognizer) {
+        if !(self.dataSource?.hasLikesToSpend() ?? false) {
+            return
+        }
+
         self.currentLikes += 1
 
         self.scheduleCreateTouchWaveView()
@@ -73,6 +88,8 @@ class LikeButton: UIView {
         self.animateLikeButtonIfNeeded()
 
         self.totalLikes += 1
+
+        self.delegate?.handleLikeAction()
     }
 
     private func animateLikeButtonIfNeeded() {

@@ -18,5 +18,6 @@ final class FailsFixture {
                                        mode: .standard,
                                        order: .hot,
                                        timeFrame: .all,
-                                       nSFW: false)
+                                       nSFW: false,
+                                       streamerName: nil)
 }

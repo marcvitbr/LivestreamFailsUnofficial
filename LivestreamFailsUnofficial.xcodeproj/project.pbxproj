@@ -42,8 +42,6 @@
 		CC2915AE226AC2B70054887B /* FailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2915AC226AC2B70054887B /* FailsViewController.swift */; };
 		CC2915B1226ADCB20054887B /* FailVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2915B0226ADCB20054887B /* FailVideoView.swift */; };
 		CC2915B2226ADCB20054887B /* FailVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2915B0226ADCB20054887B /* FailVideoView.swift */; };
-		CC2915BB226B85FD0054887B /* FailsViewControllerGesturesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2915BA226B85FD0054887B /* FailsViewControllerGesturesExtension.swift */; };
-		CC2915BC226B85FD0054887B /* FailsViewControllerGesturesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2915BA226B85FD0054887B /* FailsViewControllerGesturesExtension.swift */; };
 		CC2915C4226C2FBC0054887B /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2915C3226C2FBC0054887B /* SwiftSoup.framework */; };
 		CC2915C5226C3A5A0054887B /* RemoteFailsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC29159D226AB14D0054887B /* RemoteFailsFetcher.swift */; };
 		CC7B1BF1227FD16F0059AA70 /* LikeButtonWaveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B1BF0227FD16F0059AA70 /* LikeButtonWaveExtension.swift */; };
@@ -98,6 +96,20 @@
 		CCB25AC72284F5260061CB8C /* DefaultFetchStreamersExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25AC52284F5260061CB8C /* DefaultFetchStreamersExecutor.swift */; };
 		CCB25AC92284F5A10061CB8C /* StreamersReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25AC82284F5A10061CB8C /* StreamersReceiver.swift */; };
 		CCB25ACA2284F5A10061CB8C /* StreamersReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25AC82284F5A10061CB8C /* StreamersReceiver.swift */; };
+		CCB25ACD2287068C0061CB8C /* StreamerCircleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCB25ACC2287068C0061CB8C /* StreamerCircleView.xib */; };
+		CCB25ACE2287068C0061CB8C /* StreamerCircleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCB25ACC2287068C0061CB8C /* StreamerCircleView.xib */; };
+		CCB25AD02287069E0061CB8C /* StreamerCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25ACF2287069E0061CB8C /* StreamerCircleView.swift */; };
+		CCB25AD12287069E0061CB8C /* StreamerCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25ACF2287069E0061CB8C /* StreamerCircleView.swift */; };
+		CCB25AD4228739360061CB8C /* FailOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25AD3228739360061CB8C /* FailOverlayView.swift */; };
+		CCB25AD5228739360061CB8C /* FailOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25AD3228739360061CB8C /* FailOverlayView.swift */; };
+		CCB25AD72287393E0061CB8C /* FailOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCB25AD62287393E0061CB8C /* FailOverlayView.xib */; };
+		CCB25AD82287393E0061CB8C /* FailOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCB25AD62287393E0061CB8C /* FailOverlayView.xib */; };
+		CCB25ADB22874B820061CB8C /* FailDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCB25ADA22874B820061CB8C /* FailDetailView.xib */; };
+		CCB25ADC22874B820061CB8C /* FailDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCB25ADA22874B820061CB8C /* FailDetailView.xib */; };
+		CCB25ADE22874B920061CB8C /* FailDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25ADD22874B920061CB8C /* FailDetailView.swift */; };
+		CCB25ADF22874B920061CB8C /* FailDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25ADD22874B920061CB8C /* FailDetailView.swift */; };
+		CCB25AE5228775700061CB8C /* FailsViewControllerLikeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25AE4228775700061CB8C /* FailsViewControllerLikeExtension.swift */; };
+		CCB25AE6228775700061CB8C /* FailsViewControllerLikeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB25AE4228775700061CB8C /* FailsViewControllerLikeExtension.swift */; };
 		CCC4FF4D2279000900EFE99F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC4FF4C2279000900EFE99F /* TabBar.storyboard */; };
 		CCC4FF512279D84D00EFE99F /* Fails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC4FF502279D84D00EFE99F /* Fails.storyboard */; };
 		CCC4FF552279E9B500EFE99F /* StreamersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC4FF542279E9B500EFE99F /* StreamersView.xib */; };
@@ -176,7 +188,6 @@
 		CC2915A9226AC1E20054887B /* DefaultDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDispatcher.swift; sourceTree = "<group>"; };
 		CC2915AC226AC2B70054887B /* FailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailsViewController.swift; sourceTree = "<group>"; };
 		CC2915B0226ADCB20054887B /* FailVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailVideoView.swift; sourceTree = "<group>"; };
-		CC2915BA226B85FD0054887B /* FailsViewControllerGesturesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailsViewControllerGesturesExtension.swift; sourceTree = "<group>"; };
 		CC2915C3226C2FBC0054887B /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/iOS/SwiftSoup.framework; sourceTree = "<group>"; };
 		CC7B1BF0227FD16F0059AA70 /* LikeButtonWaveExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtonWaveExtension.swift; sourceTree = "<group>"; };
 		CC7B1BF3227FD1D60059AA70 /* LikeButtonFloatingTextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtonFloatingTextExtension.swift; sourceTree = "<group>"; };
@@ -206,6 +217,13 @@
 		CCB25AC22284EF330061CB8C /* FetchStreamersExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchStreamersExecutor.swift; sourceTree = "<group>"; };
 		CCB25AC52284F5260061CB8C /* DefaultFetchStreamersExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFetchStreamersExecutor.swift; sourceTree = "<group>"; };
 		CCB25AC82284F5A10061CB8C /* StreamersReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamersReceiver.swift; sourceTree = "<group>"; };
+		CCB25ACC2287068C0061CB8C /* StreamerCircleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreamerCircleView.xib; sourceTree = "<group>"; };
+		CCB25ACF2287069E0061CB8C /* StreamerCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamerCircleView.swift; sourceTree = "<group>"; };
+		CCB25AD3228739360061CB8C /* FailOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailOverlayView.swift; sourceTree = "<group>"; };
+		CCB25AD62287393E0061CB8C /* FailOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FailOverlayView.xib; sourceTree = "<group>"; };
+		CCB25ADA22874B820061CB8C /* FailDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FailDetailView.xib; sourceTree = "<group>"; };
+		CCB25ADD22874B920061CB8C /* FailDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailDetailView.swift; sourceTree = "<group>"; };
+		CCB25AE4228775700061CB8C /* FailsViewControllerLikeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailsViewControllerLikeExtension.swift; sourceTree = "<group>"; };
 		CCC4FF4C2279000900EFE99F /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		CCC4FF502279D84D00EFE99F /* Fails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Fails.storyboard; path = Sources/App/Presentation/Fails/Storyboard/Fails.storyboard; sourceTree = SOURCE_ROOT; };
 		CCC4FF542279E9B500EFE99F /* StreamersView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreamersView.xib; sourceTree = "<group>"; };
@@ -447,7 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				CC2915AC226AC2B70054887B /* FailsViewController.swift */,
-				CC2915BA226B85FD0054887B /* FailsViewControllerGesturesExtension.swift */,
+				CCB25AE4228775700061CB8C /* FailsViewControllerLikeExtension.swift */,
 				CCEBBE5F226D41E900EFFD88 /* FailsViewControllerPresenterExtension.swift */,
 				CC98A231227B8EA40014F98A /* FailsViewControllerStreamersPresenterExtension.swift */,
 			);
@@ -478,6 +496,8 @@
 		CC2915AF226ADC910054887B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CCB25AD922874B6E0061CB8C /* FailDetailView */,
+				CCB25AD2228739070061CB8C /* FailOverlayView */,
 				CCC4FF522279E96800EFE99F /* FailVideoView */,
 			);
 			path = View;
@@ -602,6 +622,7 @@
 		CC98A222227B84CF0014F98A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CCB25ACB2287065E0061CB8C /* StreamerCircleView */,
 				CCC4FF532279E97100EFE99F /* StreamersView */,
 			);
 			path = View;
@@ -687,6 +708,33 @@
 				CCB25AC22284EF330061CB8C /* FetchStreamersExecutor.swift */,
 			);
 			path = FetchStreamers;
+			sourceTree = "<group>";
+		};
+		CCB25ACB2287065E0061CB8C /* StreamerCircleView */ = {
+			isa = PBXGroup;
+			children = (
+				CCB25ACC2287068C0061CB8C /* StreamerCircleView.xib */,
+				CCB25ACF2287069E0061CB8C /* StreamerCircleView.swift */,
+			);
+			path = StreamerCircleView;
+			sourceTree = "<group>";
+		};
+		CCB25AD2228739070061CB8C /* FailOverlayView */ = {
+			isa = PBXGroup;
+			children = (
+				CCB25AD3228739360061CB8C /* FailOverlayView.swift */,
+				CCB25AD62287393E0061CB8C /* FailOverlayView.xib */,
+			);
+			path = FailOverlayView;
+			sourceTree = "<group>";
+		};
+		CCB25AD922874B6E0061CB8C /* FailDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				CCB25ADA22874B820061CB8C /* FailDetailView.xib */,
+				CCB25ADD22874B920061CB8C /* FailDetailView.swift */,
+			);
+			path = FailDetailView;
 			sourceTree = "<group>";
 		};
 		CCC4FF4B2278FFDD00EFE99F /* Storyboard */ = {
@@ -934,10 +982,13 @@
 				CC29154E226A6C890054887B /* LaunchScreen.storyboard in Resources */,
 				CCC4FF4D2279000900EFE99F /* TabBar.storyboard in Resources */,
 				CCC4FF512279D84D00EFE99F /* Fails.storyboard in Resources */,
+				CCB25AD72287393E0061CB8C /* FailOverlayView.xib in Resources */,
 				CCC4FF552279E9B500EFE99F /* StreamersView.xib in Resources */,
+				CCB25ADB22874B820061CB8C /* FailDetailView.xib in Resources */,
 				CC98A240227BEBAE0014F98A /* LikeButton.xib in Resources */,
 				CC29154B226A6C890054887B /* Assets.xcassets in Resources */,
 				CC98A239227BE81A0014F98A /* SocialView.xib in Resources */,
+				CCB25ACD2287068C0061CB8C /* StreamerCircleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,8 +996,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB25ADC22874B820061CB8C /* FailDetailView.xib in Resources */,
 				CC98A241227BEBAE0014F98A /* LikeButton.xib in Resources */,
+				CCB25AD82287393E0061CB8C /* FailOverlayView.xib in Resources */,
 				CC98A23A227BE81A0014F98A /* SocialView.xib in Resources */,
+				CCB25ACE2287068C0061CB8C /* StreamerCircleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1000,6 +1054,7 @@
 				CC98A243227BEBD30014F98A /* LikeButton.swift in Sources */,
 				CCEBBE36226D13A900EFFD88 /* FailID.swift in Sources */,
 				CCEBBE60226D41E900EFFD88 /* FailsViewControllerPresenterExtension.swift in Sources */,
+				CCB25AE5228775700061CB8C /* FailsViewControllerLikeExtension.swift in Sources */,
 				CC98A21C227A623B0014F98A /* StreamerHTMLParser.swift in Sources */,
 				CC98A217227A61A60014F98A /* RemoteStreamerFetcher.swift in Sources */,
 				CC98A20D227A36610014F98A /* StreamerFetcherError.swift in Sources */,
@@ -1010,6 +1065,7 @@
 				CC98A225227B84F20014F98A /* StreamersPresenter.swift in Sources */,
 				CC98A207227A36050014F98A /* StreamerFetcher.swift in Sources */,
 				CC291590226AA8410054887B /* Streamer.swift in Sources */,
+				CCB25AD4228739360061CB8C /* FailOverlayView.swift in Sources */,
 				CC7B1BF1227FD16F0059AA70 /* LikeButtonWaveExtension.swift in Sources */,
 				CCB25AC92284F5A10061CB8C /* StreamersReceiver.swift in Sources */,
 				CC29158D226AA81C0054887B /* FailSummary.swift in Sources */,
@@ -1017,9 +1073,9 @@
 				CC291593226AA9AF0054887B /* FailsQuery.swift in Sources */,
 				CC291544226A6C880054887B /* AppDelegate.swift in Sources */,
 				CCC4FF572279E9C500EFE99F /* StreamersView.swift in Sources */,
-				CC2915BB226B85FD0054887B /* FailsViewControllerGesturesExtension.swift in Sources */,
 				CCEBBE56226D2CD800EFFD88 /* FetchFailDetailsExecutorError.swift in Sources */,
 				CC291571226A6E3C0054887B /* ParameterizedUseCase.swift in Sources */,
+				CCB25ADE22874B920061CB8C /* FailDetailView.swift in Sources */,
 				CCEBBE42226D247200EFFD88 /* FetchFailsSummariesExecutor.swift in Sources */,
 				CC2915B1226ADCB20054887B /* FailVideoView.swift in Sources */,
 				CCEBBE33226D136100EFFD88 /* FetchFailDetails.swift in Sources */,
@@ -1031,6 +1087,7 @@
 				CC291586226AA7AE0054887B /* FailsSummariesReceiver.swift in Sources */,
 				CCEBBE50226D2B5800EFFD88 /* FetchFailDetailsExecutor.swift in Sources */,
 				CC98A22C227B85860014F98A /* DefaultFetchStreamerDetailsExecutor.swift in Sources */,
+				CCB25AD02287069E0061CB8C /* StreamerCircleView.swift in Sources */,
 				CCEBBE2A226D0BCB00EFFD88 /* FailDetails.swift in Sources */,
 				CC98A1F5227A12920014F98A /* DefaultColors.swift in Sources */,
 				CCEBBE4B226D278100EFFD88 /* FailDetailsReceiver.swift in Sources */,
@@ -1046,7 +1103,6 @@
 				CC98A20E227A36610014F98A /* StreamerFetcherError.swift in Sources */,
 				CCC4FF5C2279EA6C00EFE99F /* PassthroughView.swift in Sources */,
 				CC2915C5226C3A5A0054887B /* RemoteFailsFetcher.swift in Sources */,
-				CC2915BC226B85FD0054887B /* FailsViewControllerGesturesExtension.swift in Sources */,
 				CC98A1F6227A13BC0014F98A /* DefaultColors.swift in Sources */,
 				CC98A218227A61A60014F98A /* RemoteStreamerFetcher.swift in Sources */,
 				CCEBBE37226D13A900EFFD88 /* FailID.swift in Sources */,
@@ -1059,11 +1115,13 @@
 				CCEBBE46226D24A200EFFD88 /* DefaultFetchFailsSummariesExecutor.swift in Sources */,
 				CCB25AC42284EF330061CB8C /* FetchStreamersExecutor.swift in Sources */,
 				CC291581226AA7790054887B /* FetchFailsSummaries.swift in Sources */,
+				CCB25ADF22874B920061CB8C /* FailDetailView.swift in Sources */,
 				CC29157E226AA74C0054887B /* FailsFetcherMockForException.swift in Sources */,
 				CC98A220227A625E0014F98A /* StreamerHTMLParserError.swift in Sources */,
 				CC98A212227A36A60014F98A /* StreamerDetailsReceiverMock.swift in Sources */,
 				CC98A208227A36050014F98A /* StreamerFetcher.swift in Sources */,
 				CCB25ABF2284E8CE0061CB8C /* FetchStreamers.swift in Sources */,
+				CCB25AD5228739360061CB8C /* FailOverlayView.swift in Sources */,
 				CC98A20B227A36360014F98A /* StreamerDetailsReceiver.swift in Sources */,
 				CCEBBE3E226D232700EFFD88 /* FailsHTMLParserError.swift in Sources */,
 				CC29157C226AA72B0054887B /* FailsReceiverMock.swift in Sources */,
@@ -1079,12 +1137,14 @@
 				CC98A226227B84F20014F98A /* StreamersPresenter.swift in Sources */,
 				CCEBBE34226D136100EFFD88 /* FetchFailDetails.swift in Sources */,
 				CC29158A226AA7FA0054887B /* FailsFetcherError.swift in Sources */,
+				CCB25AD12287069E0061CB8C /* StreamerCircleView.swift in Sources */,
 				CC291578226A6EC50054887B /* FetchFailsSummariesTests.swift in Sources */,
 				CCEBBE61226D41E900EFFD88 /* FailsViewControllerPresenterExtension.swift in Sources */,
 				CC98A201227A337A0014F98A /* StreamerFixture.swift in Sources */,
 				CCEBBE54226D2C2E00EFFD88 /* DefaultFetchFailDetailsExecutor.swift in Sources */,
 				CC98A22A227B854A0014F98A /* FetchStreamerDetailsExecutor.swift in Sources */,
 				CC98A205227A35920014F98A /* FetchStreamerDetails.swift in Sources */,
+				CCB25AE6228775700061CB8C /* FailsViewControllerLikeExtension.swift in Sources */,
 				CCEBBE2E226D0DE500EFFD88 /* FailsFixture.swift in Sources */,
 				CC7B1BF2227FD16F0059AA70 /* LikeButtonWaveExtension.swift in Sources */,
 				CC291587226AA7AE0054887B /* FailsSummariesReceiver.swift in Sources */,

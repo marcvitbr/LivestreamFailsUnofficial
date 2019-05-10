@@ -12,10 +12,38 @@ import UIKit
 class SocialView: UIView {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var likeButton: LikeButton!
-
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     unowned var viewController: UIViewController! {
         didSet {
             self.likeButton.viewController = self.viewController
+        }
+    }
+
+    weak var likeButtonDataSource: LikeButtonDataSource? {
+        didSet {
+            self.likeButton.dataSource = self.likeButtonDataSource
+        }
+    }
+
+    weak var likeButtonDelegate: LikeButtonDelegate? {
+        didSet {
+            self.likeButton.delegate = self.likeButtonDelegate
+        }
+    }
+
+    var profilePictureURL: URL? {
+        didSet {
+            if let url = self.profilePictureURL {
+                self.profileImageView.kf.setImage(with: url)
+            }
+        }
+    }
+
+    var streamerName: String? {
+        didSet {
+            self.nameLabel.text = self.streamerName
         }
     }
 
@@ -31,6 +59,8 @@ class SocialView: UIView {
 
     private func initialize() {
         self.loadNib()
+
+        self.configureProfilePictureImageView()
     }
 
     private func loadNib() {
@@ -41,5 +71,10 @@ class SocialView: UIView {
         self.contentView.frame = self.bounds
 
         self.addSubview(self.contentView)
+    }
+
+    private func configureProfilePictureImageView() {
+        self.profileImageView.clipsToBounds = true
+        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.height / 2
     }
 }

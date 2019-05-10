@@ -6,7 +6,7 @@
 //  Copyright © 2019 Marcelo Vitoria. All rights reserved.
 //
 
-extension FailsViewController: StreamersScreen {
+extension FailsViewController: StreamersScreen, StreamersViewDelegate {
     func configureStreamersPresenter() {
         self.streamersPresenter = StreamersPresenter(screen: self,
                                                      fetchStreamersExecutor: self.streamersExecutor,
@@ -14,15 +14,30 @@ extension FailsViewController: StreamersScreen {
                                                      dispatcher: self.dispatcher)
     }
 
-    func presentStreamerDetails(_ streamer: Streamer) {
-        self.streamersView.addStreamer(streamer)
-    }
-
-    func showErrorObtainingStreamerDetails(_ name: String) {}
-
     func presentStreamers(_ streamers: [Streamer]) {
         self.streamersView.addStreamers(streamers)
+
+        if let firstStreamer = streamers.first {
+            self.failsPresenter?.fetchFails(ofStreamer: firstStreamer.name)
+
+            self.presentStreamerDetails(firstStreamer)
+        }
+    }
+
+    func handleStreamerSelection(_ streamer: Streamer) {
+        self.currentFailView.stop()
+
+        self.failsPresenter?.fetchFails(ofStreamer: streamer.name)
+
+        self.presentStreamerDetails(streamer)
+    }
+
+    func presentStreamerDetails(_ streamer: Streamer) {
+        self.socialView.profilePictureURL = streamer.profilePictureURL
+        self.socialView.streamerName = streamer.name
     }
 
     func showErrorObtainingStreamers() {}
+
+    func showErrorObtainingStreamerDetails(_ name: String) {}
 }

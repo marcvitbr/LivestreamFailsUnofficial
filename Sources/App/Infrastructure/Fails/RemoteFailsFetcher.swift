@@ -17,11 +17,15 @@ final class RemoteFailsFetcher: FailsFetcher {
     private lazy var parser = FailsHTMLParser()
 
     func fetchSummaries(with query: FailsQuery) throws -> [FailSummary] {
-        let queryParameters: [String: Any] = ["loadPostPage": query.page,
+        var queryParameters: [String: Any] = ["loadPostPage": query.page,
                                               "loadPostMode": query.mode.description,
                                               "loadPostOrder": query.order.description,
                                               "loadPostTimeFrame": query.timeFrame.description,
                                               "loadPostNSFW": NSNumber(booleanLiteral: query.nSFW)]
+
+        if let streamerName = query.streamerName {
+            queryParameters["loadPostModeStreamer"] = streamerName
+        }
 
         let url = URL(string: self.summariesEndpoint)!
 

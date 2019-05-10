@@ -17,15 +17,9 @@ final class DefaultFetchFailsSummariesExecutor: FetchFailsSummariesExecutor, Fai
 
     private var retrievedSummaries: [FailSummary]?
 
-    func executeFetchFailsSummaries(page: Int) -> [FailSummary] {
+    func executeFetchFailsSummaries(query: FailsQuery) -> [FailSummary] {
         let fetchSummaries = FetchFailsSummaries(fetcher: self.remoteFetcher,
                                                  receiver: self)
-
-        let query = FailsQuery(page: page,
-                               mode: .standard,
-                               order: .new,
-                               timeFrame: .all,
-                               nSFW: false)
 
         fetchSummaries.execute(with: query)
 

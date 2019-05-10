@@ -11,10 +11,18 @@ import UIKit
 import AVFoundation
 import Kingfisher
 
+protocol FailVideoViewDelegate: AnyObject {
+    func changeElapsedTimeText(_ elapsedTimeText: String)
+    func resetElapsedTimeText()
+}
+
 class FailVideoView: UIView {
     private let defaultFontSize: CGFloat = 17
     private var streamerNameLabel: UILabel!
     private var failDescriptionLabel: UILabel!
+    private var timeObserverToken: Any?
+
+    weak var delegate: FailVideoViewDelegate?
 
     private var playerLayer: AVPlayerLayer {
         return self.layer as! AVPlayerLayer
@@ -68,15 +76,79 @@ class FailVideoView: UIView {
         return AVPlayerLayer.self
     }
 
+    private var currentDuration: CMTime?
+
+    private func addPeriodicTimeObserver() {
+        guard let player = self.player else {
+            return
+        }
+
+        let timeScale = CMTimeScale(NSEC_PER_SEC)
+        let time = CMTime(seconds: 1, preferredTimescale: timeScale)
+        let tick: (CMTime) -> Void = { [weak self] time in
+            guard let certainSelf = self else {
+                return
+            }
+
+            certainSelf.handlePlaybackTimeChange(time)
+        }
+
+        self.timeObserverToken = player.addPeriodicTimeObserver(forInterval: time,
+                                                                queue: .main,
+                                                                using: tick)
+    }
+
+    private func removePeriodicTimeObserver() {
+        guard let player = self.player else {
+            return
+        }
+
+        if let timeObserverToken = self.timeObserverToken {
+            player.removeTimeObserver(timeObserverToken)
+            self.timeObserverToken = nil
+        }
+    }
+
+    private func handlePlaybackTimeChange(_ time: CMTime) {
+        guard let currentItem = self.player?.currentItem else {
+            return
+        }
+
+        if self.currentDuration == nil {
+            self.currentDuration = currentItem.duration
+        }
+
+        guard let duration = self.currentDuration else {
+            return
+        }
+
+        let durationSec = duration.value / Int64(duration.timescale)
+        let elapsed = time.value / Int64(time.timescale)
+        let newTimeSec = durationSec - elapsed
+        let newTimeMin = newTimeSec / 60
+        let newTimeHour = newTimeSec / 60 / 60
+
+        let formattedElapsedText = String(format: "%02d:%02d:%02d",
+                                          newTimeHour,
+                                          newTimeMin,
+                                          newTimeSec)
+
+        self.delegate?.changeElapsedTimeText(formattedElapsedText)
+    }
+
     func play() {
+        self.addPeriodicTimeObserver()
         self.enableVideoLoop()
         self.player?.play()
     }
 
     func stop() {
+        self.removePeriodicTimeObserver()
         self.disableVideoLoop()
         self.player?.pause()
         self.player = nil
+        self.currentDuration = nil
+        self.delegate?.resetElapsedTimeText()
     }
 
     private func initialize() {

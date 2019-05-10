@@ -16,6 +16,10 @@ extension UIColor {
     class func themeLikeButtonColor() -> UIColor {
         return UIColor(red: 253/255, green: 160/255, blue: 68/255, alpha: 1)
     }
+
+    class func themeTextColor() -> UIColor {
+        return UIColor(red: 176/255, green: 181/255, blue: 184/255, alpha: 1)
+    }
 }
 
 extension UIColor {

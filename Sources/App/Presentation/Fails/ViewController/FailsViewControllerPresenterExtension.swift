@@ -24,8 +24,7 @@ extension FailsViewController: FailsScreen {
             return
         }
 
-        self.currentFailView?.summary = first
-        self.currentFailIndex = 0
+        self.presentSummary(first)
 
         self.failsPresenter?.fetchDetails(of: first.failID)
     }
@@ -45,4 +44,10 @@ extension FailsViewController: FailsScreen {
     func hideIndicatorForObtaningFails() {}
 
     func hideIndicatorForObtainingDetails() {}
+
+    private func presentSummary(_ summary: FailSummary) {
+        self.failDetailView.title = summary.description
+        self.failDetailView.subtitle = summary.gameName
+        self.failDetailView.likeCount = 100
+    }
 }

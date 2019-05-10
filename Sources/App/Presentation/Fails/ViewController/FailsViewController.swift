@@ -9,11 +9,13 @@
 import UIKit
 import AVKit
 
-class FailsViewController: UIViewController {
+class FailsViewController: UIViewController, FailVideoViewDelegate {
     @IBOutlet weak var streamersView: StreamersView!
     @IBOutlet weak var currentFailView: FailVideoView!
     @IBOutlet weak var socialView: SocialView!
-
+    @IBOutlet weak var overlayView: FailOverlayView!
+    @IBOutlet weak var failDetailView: FailDetailView!
+    
     var initialTouchLocation: CGPoint?
 
     internal lazy var failsSummariesExecutor = DefaultFetchFailsSummariesExecutor()
@@ -26,7 +28,6 @@ class FailsViewController: UIViewController {
     internal var streamersPresenter: StreamersPresenter?
 
     internal var fails: [FailSummary]?
-    internal var currentFailIndex: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,16 +37,8 @@ class FailsViewController: UIViewController {
         self.configureStreamersPresenter()
 
         self.configureFailView()
-    }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        self.failsPresenter?.fetchSummaries()
+        self.configureLikeButtonBehavior()
 
         self.streamersPresenter?.fetchStreamers()
     }
@@ -54,9 +47,21 @@ class FailsViewController: UIViewController {
         return .lightContent
     }
 
+    func changeElapsedTimeText(_ elapsedTimeText: String) {
+        self.overlayView.elapsedText = elapsedTimeText
+    }
+
+    func resetElapsedTimeText() {
+        self.overlayView.elapsedText = ""
+    }
+
     private func configureFailView() {
         self.view.bringSubviewToFront(self.streamersView)
 
         self.socialView.viewController = self
+
+        self.streamersView.delegate = self
+
+        self.currentFailView.delegate = self
     }
 }

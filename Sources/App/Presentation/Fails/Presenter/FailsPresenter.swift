@@ -25,11 +25,18 @@ final class FailsPresenter {
         self.dispatcher = dispatcher
     }
 
-    func fetchSummaries() {
+    func fetchFails(ofStreamer streamerName: String) {
         self.screen.showIndicatorForObtainingFails()
 
         self.dispatcher?.executeAsync { [weak self] in
-            guard let summaries = self?.fetchSummariesExecutor.executeFetchFailsSummaries(page: 20) else {
+            let failsForStreamerQuery = FailsQuery(page: 0,
+                                                   mode: .streamer,
+                                                   order: .new,
+                                                   timeFrame: .month,
+                                                   nSFW: false,
+                                                   streamerName: streamerName)
+
+            guard let summaries = self?.fetchSummariesExecutor.executeFetchFailsSummaries(query: failsForStreamerQuery) else {
                 self?.showErrorObtainingFailsOnScreen()
                 return
             }
