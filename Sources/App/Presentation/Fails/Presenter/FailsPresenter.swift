@@ -32,7 +32,7 @@ final class FailsPresenter {
             let failsForStreamerQuery = FailsQuery(page: 0,
                                                    mode: .streamer,
                                                    order: .new,
-                                                   timeFrame: .month,
+                                                   timeFrame: .all,
                                                    nSFW: false,
                                                    streamerName: streamerName)
 
